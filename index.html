@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css" />
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+    <title>Azure Maps Example</title>
+    <style>
+        html, body {
+                 margin: 0;
+             }
+    
+             #exampleMap {
+                 height: 100vh;
+                 width: 100vw;
+             }
+    </style>
+    <script>
+        function GetMap(){
+            map = new atlas.Map('exampleMap', {
+                 view: 'Auto',
+                 center: [60, 40],
+                 zoom: 1,
+                 pitch: 0,
+                 language: 'en-US',
+                 authOptions: {
+                     authType: 'subscriptionKey',
+                     subscriptionKey: '<Your subscription key>'
+                 }
+             });
+        }
+    </script>
+</head>
+<body onload='GetMap()'>
+    <div id="exampleMap"></div>
+</body>
+</html>
